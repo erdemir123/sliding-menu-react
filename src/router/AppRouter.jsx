@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Login from "../pages/Login"
-import Store from '../pages/Store'
+import Store from '../pages/Storeproduct'
 
 const AppRouter = () => {
   return (
