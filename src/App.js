@@ -1,17 +1,14 @@
-
-import './App.css';
+import { Provider } from "react-redux";
+import "./App.css";
+import store from "./app/store";
+import AppRouter from "./router/AppRouter";
 
 function App() {
-  const handleClick=(e)=>{
-console.log(e.target.getBoundingClientRect());
-  }
   return (
     <div className="App">
-      <button onClick={handleClick}>Hakkımızda</button>
-      <button onClick={handleClick}>İletişim</button>
-      <button onClick={handleClick}>Blog</button>
-      <button onClick={handleClick}>Makaleler</button>
-      <button onClick={handleClick}>Dersler</button>
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
     </div>
   );
 }
