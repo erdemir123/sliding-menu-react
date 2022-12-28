@@ -35,6 +35,7 @@ const ProductSlice = createSlice({
     .addCase(getProduct.fulfilled,(state,{payload})=>{
         state.loading=false
         state.productList=payload
+        // localStorage.setItem("product",JSON.stringify(state.productList))
     })
     .addCase(getProduct.rejected,(state,{payload})=>{
         state.error= true
